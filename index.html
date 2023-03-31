@@ -1,1 +1,23 @@
-<h>Yuzhuo's html page</h>
+<!doctype html>
+<html lang="us">
+    <head>
+        <meta charset="utf-8">
+        <h1>Yuzhuo's html page</h1>
+        <link href="jquery-ui-1.13.2.custom/jquery-ui.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Datepicker -->
+        <h2 class="demoHeaders">Datepicker</h2>
+        <div id="datepicker"></div>
+
+        <script src="jquery-ui-1.13.2.custom/external/jquery/jquery.js"></script>
+        <script src="jquery-ui-1.13.2.custom/jquery-ui.js"></script>
+        <script>
+
+            $( "#datepicker" ).datepicker({
+                inline: true
+            });
+
+        </script>
+    </body>
+</html>
