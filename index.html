@@ -2,22 +2,97 @@
 <html lang="us">
     <head>
         <meta charset="utf-8">
-        <h1>Yuzhuo's html page</h1>
+        <h1 id = "mainPageTitle">Welcome to Yuzhuo Ye's page</h1>
+        <link href="mainPage.css" rel="stylesheet">
         <link href="jquery-ui-1.13.2.custom/jquery-ui.css" rel="stylesheet">
+
     </head>
     <body>
-        <!-- Datepicker -->
-        <h2 class="demoHeaders">Datepicker</h2>
-        <div id="datepicker"></div>
+        <div class="mainPage">
+            <div class="mainPageLeft">
+                <img src="myPicture.jpg" alt="my Picture" id = "myPicture">
+                
+            </div>
+            <div class="mainPageRight">
+                <h2 id = "resumeTitle">RESUME</h2>
+                <h3 class="resumeSubTitle">SUMMARY</h3>
+                <p class="resumeContent">* Computer Science student with exposure to advanced development methodologies and on demand programming languages, tools, and processes contributing to the design and rollout of software applications. <br>
+                    * Strong Software Engineering fundamentals including an unwavering belief in championing good design patterns, systems architecture, software security, and scalable methodologies.<br><br>
+                    * Good understanding of Object-Oriented Programming and Design (OOP/OOD) in an agile/scrum work environment.<br><br>
+                    * Ability to analyze code and engineer well-researched, cost-effective and responsive solutions. <br><br>
+                    * <strong>Programming languages:</strong> C/C++/c#, Python, Java, Rust, JavaScript, HTML, SQL<br><br>
+                    * <strong>Knowledge:</strong> Data Structures, Algorithm, Operating System, Computer Networking, Software Testing, Database System, Data Mining
+                </p>
+
+                <h3 class="resumeSubTitle">WORK EXPERIENCE</h3>
+                <h4 class="resumeworkTitle">Software Developer</h4>
+                <h4 class="resumeTime">Jul 2022 - Mar 2023</h4>
+                <p> -Comunicate with customer and resolve the production bug.<br>
+                    -Find bugs depend on issue in production environment and resolve it.<br>
+                    -Processing data in database in both production environment and local environment.<br>
+                    -Develop new function in production depend on the requirement by customer.<br>
+                    -Design and create table in database to process and save data in database.<br>
+                    -Change UI depend on the customer's preference<br>
+                    -Resolve both front-end and back-end bug
+                </p>
+
+                <h4 class="resumeworkTitle">Software Engineer Intern</h4>
+                <h4 class="resumeTime">Jun 2021 - Aug 2021</h4>
+                <p> -Communicated with the marketing team to determine the needs and designed a data scraping solution.<br>
+                    -Utilized tools like Charles to perform package capture.<br>
+                    -Developed codes to send request packages to other websites.<br>
+                    -Developed codes to receive packages and process the data from packages.<br>
+                    -Developed to scrape the application on the mobile phone (Android).
+                </p>
+
+                <h3 class="resumeSubTitle">RELATED PROJECTS</h3>
+                <h4 class="resumeworkTitle">COVID-19 Classifier / Data mining</h4>
+                <h4 class="resumeTime">Sep 2020 - Dec 2020</h4>
+                <p> • Implemented COVID-19 classifier using Python.<br>
+                    • Data preprocessing: handled irregular data and outliers, did data irrigation, joined state and location data sets.<br>
+                    • Built XGBoost classification model and SVMs classification model using training dataset.<br>
+                    • Used the test dataset to test the precision and compare these two models.<br>
+                    • Used accuracy to check for overfitting.
+                </p>
+
+                <h4 class="resumeworkTitle">Yase Database System / Database Systems II</h4>
+                <h4 class="resumeTime">Sep 2020 - Dec 2020</h4>
+                <p> • Coded a relational database system using C++.<br>
+                    • Generated basefile for storing/loading page to/from disk.<br>
+                    • Generated a LRU buffer manager to efficiently manage memory buffers.<br>
+                    • Implemented in memory and persistent skip list which support faster lookup, forward scan, reverse scan.<br>
+                    • Implemented logging and locking for consistency and correctness.
+                </p>
+
+                <h4 class="resumeworkTitle">Mota Game / Intro Software Engineer</h4>
+                <h4 class="resumeTime">Jan 2020 - Apr 2020</h4>
+                <p> • Designed class diagram for the whole project.<br>
+                    • Designed and implemented UI including window and keyboard interaction.<br>
+                    • Did the refactor for duplicate codes.<br>
+                    • Implemented game logic including collision detection and player actions.<br>
+                    • Added unit tests and integration tests using JUnit.
+                </p>
+
+                <h4 class="resumeworkTitle">Pacman / Artificial Intelligence Survey</h4>
+                <h4 class="resumeTime">Jan 2020 - Apr 2020</h4>
+                <p> • Coded Pacman game using python.<br>
+                    • Generated search agent including DFS, BFS and A* search.<br>
+                    • Implemented minimax, expectimax search with alpha-beta pruning.<br>
+                    • Generated reinforcement learning agent including value iteration and Q-learning with epsilon greedy.<br>
+                    • Implemented HMM agent with elapse time.
+                </p>
+
+                <h3 class="resumeSubTitle">EDUCATION</h3>
+                <h4 class="resumeworkTitle">Bachelor of Science - Computer Science, Simon Fraser University</h4>
+                <h4 class="resumeTime">Graduated May 2022</h4>
+                <p>
+                    <strong>Courses:</strong> Software Engineering, Numerical Analysis, Data Structures, Artificial Intelligence, Database Systems, Data Analysis, Software Testing, Reliability & Security, Dynamical Systems  
+                </p>
+
+            </div>
 
         <script src="jquery-ui-1.13.2.custom/external/jquery/jquery.js"></script>
         <script src="jquery-ui-1.13.2.custom/jquery-ui.js"></script>
-        <script>
-
-            $( "#datepicker" ).datepicker({
-                inline: true
-            });
-
-        </script>
+          
     </body>
 </html>

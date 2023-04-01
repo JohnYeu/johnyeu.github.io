@@ -1,0 +1,56 @@
+body {
+    background-color: aliceblue;    
+}
+
+p {
+    margin-left: 10px;
+}
+
+.demoHeaders {
+    color: blue;
+}
+
+
+#mainPageTitle {
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    color: orangered;
+}
+
+.mainPageLeft {
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.mainPageLeft #myPicture {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.mainPageRight {
+    width: 68%;
+    padding: 10px;
+    box-sizing: border-box;
+    float: right;
+}
+
+#resumeTitle {
+    text-align: center;
+}
+
+.resumeworkTitle {
+    display: inline;
+}
+
+.resumeTime {
+    display: inline;
+    float: right;
+    margin: 0px;
+}
+
+
+
+
+
