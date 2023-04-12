@@ -6,11 +6,8 @@ p {
     margin-left: 10px;
 }
 
-.demoHeaders {
-    color: blue;
-}
 
-
+/* main page */
 #mainPageTitle {
     text-align: center;
     font-family: Verdana, sans-serif;
@@ -18,10 +15,11 @@ p {
 }
 
 .mainPageLeft {
-    width: 30%;
+    width: 250px;
     padding: 10px;
     box-sizing: border-box;
     display: inline-block;
+    position: absolute;
 }
 
 .mainPageLeft #myPicture {
@@ -34,8 +32,22 @@ p {
     padding: 10px;
     box-sizing: border-box;
     float: right;
+    position: absolute;
+    left: 250px;
 }
 
+#mainPageResumeButton {
+    position: absolute;
+    top: 400px;
+    left: 20px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: beige;
+}
+
+
+/* resume */
 #resumeTitle {
     text-align: center;
 }
@@ -53,6 +65,107 @@ p {
 .resumeCompany {
     margin: 0px;
 }
+
+
+/*snake Game*/
+#mainPageSnakeGameButton {
+    position: absolute;
+    top: 480px;
+    left: 20px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: beige;
+}
+
+#snakeGame > h2 {
+    text-align: center;
+}
+
+#snakeGameBoard > table {
+    background-color: antiquewhite;
+    margin: auto;
+    width: 800px;
+    height: 700px;
+    border: 5px solid burlywood;
+    display: none;
+}
+
+#snakeGameBoard > table td {
+    
+    width: 17.5px;
+    max-width: 17.5px;
+    height: 17.5px;
+    max-height: 17.5px;
+    text-align: center;
+    padding: 0.5px;
+
+}
+#snakeGameBoard > table tr {
+    
+    height: 17.5px;
+    max-height: 17.5px;
+
+}
+
+#snakeGameBoard > table .snakeHead {
+    background-color: lightsalmon;
+}
+
+#snakeGameBoard > table .snakeBody {
+    background-color: black;
+}
+
+#snakeGameBoard > table .snakeFood img {
+    max-width: 100%;
+    max-height: 75%;
+    background-color: antiquewhite;
+}
+
+#snakeGameBoard > div {
+    margin: auto;
+    width: 800px;
+    height: 700px;
+    background: coral;
+    border: 5px solid brown;
+    display: none;
+    align-items: center; 
+    justify-content: center; 
+}
+
+#snakeGameBoard > div:nth-of-type(2) > h2:nth-of-type(2)  {
+    position: absolute;
+    top: 500px; 
+}
+
+#snakeGameBoard > div:nth-of-type(2) > button {
+    position: absolute;
+    top: 580px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: cadetblue;
+}
+
+#snakeGameBoard > div:nth-of-type(1) > button {
+    position: absolute;
+    top: 580px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: cadetblue;
+}
+
+#snakeGameBoard > div:nth-of-type(1) > img {
+    width: 50%;
+    position: relative;
+    top: -15%;
+}
+
+
+
+
+
 
 
 
