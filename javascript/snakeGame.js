@@ -9,6 +9,12 @@ var food;
 var score = 0;
 var TABLE_ROW = 30;
 var TABLE_COLUMN = 37;
+let difficulty = new Map();
+difficulty.set("easy", 500);
+difficulty.set("normal", 200);
+difficulty.set("difficult", 100);
+var selectDiff = "normal";
+var timer;
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -174,7 +180,9 @@ function gameOver() {
      });
     
     $("#snakeGameScore").text(`Score: ${score}`);
+
     startGame();
+
 }
 
 
@@ -186,7 +194,42 @@ function startGame() {
         {x: 2, y: 0}];
     moveState = "";
     score = 0;
+    if ($("#snakeGameBoard > div:nth-of-type(1)").css("display") !== "none") {
+        $(`#snakeGameDifficulty > label > input[value=${selectDiff}]:eq(0)`).click();
+    }else if ($("#snakeGameBoard > div:nth-of-type(2)").css("display") !== "none") {
+        $(`#snakeGameDifficulty > label > input[value=${selectDiff}]`).click();
+    }
+    
+    
 }
+
+//set difficulty
+function setDifficulty() {
+    if (timer !== undefined) {
+        clearInterval(timer);
+    }
+    timer = setInterval(function() {
+        if ($("#snakeGame").css("display") === "block") {
+            switch (moveState) {
+                case "Up":
+                    moveUp();
+                    break;
+                case "Down":
+                    moveDown();
+                    break;
+                case "Left":
+                    moveLeft();
+                    break;
+                case "Right":
+                    moveRight();
+                    break;
+            }
+            refresh();
+        }        
+        
+    },difficulty.get(selectDiff));
+
+} 
 
 
 $(function() {
@@ -195,7 +238,45 @@ $(function() {
         $("#snakeGameBoard > table").css("display", "table");
         startGame();
         refresh();
-     })
+     });
+
+     //create radio for choosing difficulty level
+     var container = $('<div>').attr('class', 'snakeGameDifficulty').appendTo("#snakeGameBoard > div:nth-of-type(1), #snakeGameBoard > div:nth-of-type(2)");
+
+     var option1 = $('<input>').attr({
+        type: 'radio',
+        name: 'difficulty',
+        value: "easy"
+      });
+      var label1 = $('<label>').append(option1, 'Easy').appendTo(container);
+      
+      var option2 = $('<input>').attr({
+        type: 'radio',
+        name: 'difficulty',
+        value: "normal",
+        checked: true
+      });
+      var label2 = $('<label>').append(option2, 'Normal').appendTo(container);
+      
+      var option3 = $('<input>').attr({
+        type: 'radio',
+        name: 'difficulty',
+        value: "difficult"
+      });
+      var label3 = $('<label>').append(option3, 'Difficult').appendTo(container);
+
+      $('input[name="difficulty"]:eq(1)').click();
+
+
+
+      $('input[name="difficulty"]').on('change', function() {
+        selectDiff = $('input[name="difficulty"]:checked').val();
+        setDifficulty();
+
+      });
+
+
+
 
     //create game dashboard
     var snakeBoard = $("#snakeGameBoard > table");
@@ -216,26 +297,7 @@ $(function() {
     $("#snakeGameBoard > table").append(snakeBoard); 
 
     //refresh page
-    setInterval(function() {
-        if ($("#snakeGame").css("display") === "block") {
-            switch (moveState) {
-                case "Up":
-                    moveUp();
-                    break;
-                case "Down":
-                    moveDown();
-                    break;
-                case "Left":
-                    moveLeft();
-                    break;
-                case "Right":
-                    moveRight();
-                    break;
-            }
-            refresh();
-        }        
-        
-    },200);
+    setDifficulty(200);
     
 
     //control direction
