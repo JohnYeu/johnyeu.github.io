@@ -68,6 +68,9 @@ p {
 
 
 /*snake Game*/
+#snakeGame {
+    display: none;
+}
 #mainPageSnakeGameButton {
     position: absolute;
     top: 480px;
