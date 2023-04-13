@@ -194,6 +194,7 @@ $(function() {
         $("#snakeGameBoard > div:nth-of-type(1)").css("display", "none");
         $("#snakeGameBoard > table").css("display", "table");
         startGame();
+        refresh();
      })
 
     //create game dashboard
@@ -215,8 +216,8 @@ $(function() {
     $("#snakeGameBoard > table").append(snakeBoard); 
 
     //refresh page
-    if ($("#snakeGame").css("display") === "block") {
-        setInterval(function() {
+    setInterval(function() {
+        if ($("#snakeGame").css("display") === "block") {
             switch (moveState) {
                 case "Up":
                     moveUp();
@@ -230,15 +231,16 @@ $(function() {
                 case "Right":
                     moveRight();
                     break;
-            } 
+            }
             refresh();
-        },200);
-    }
-
+        }        
+        
+    },200);
+    
 
     //control direction
-    if ($("#snakeGame").css("display") === "block") {
-        $(document).on('keydown', function(e) {
+    $(document).on('keydown', function(e) {
+        if ($("#snakeGame").css("display") === "block") { 
             switch (e.key){
                 case "ArrowUp":
                     moveState = moveStates.up;
@@ -252,10 +254,11 @@ $(function() {
                 case "ArrowRight":
                     moveState = moveStates.right;
                     break;
-
+    
             }
-          });
-    }
+        }
+        });
+    
 
 
 
