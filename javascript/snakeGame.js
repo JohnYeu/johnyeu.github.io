@@ -195,9 +195,9 @@ function startGame() {
     moveState = "";
     score = 0;
     if ($("#snakeGameBoard > div:nth-of-type(1)").css("display") !== "none") {
-        $(`#snakeGameDifficulty > label > input[value=${selectDiff}]:eq(0)`).click();
+        $(`#snakeGameBoard > div:nth-of-type(1) .snakeGameDifficulty > label > input[value=${selectDiff}]:eq(0)`).click();
     }else if ($("#snakeGameBoard > div:nth-of-type(2)").css("display") !== "none") {
-        $(`#snakeGameDifficulty > label > input[value=${selectDiff}]`).click();
+        $(`#snakeGameBoard > div:nth-of-type(2) .snakeGameDifficulty > label > input[value=${selectDiff}]`).click();
     }
     
     
