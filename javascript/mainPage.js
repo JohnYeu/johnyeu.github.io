@@ -9,10 +9,10 @@ $(function() {
         $("#resume").css("display", "none");
         $("#snakeGame").css("display", "block");
         $("#snakeGameBoard > div:nth-of-type(1)").css("display", "flex");
-        $("#snakeGameBoard > div:nth-of-type(2)").css("display", "none");
+        $("#snakeGameOver").css("display", "none");
         $("#snakeGameBoard > table").css("display", "none");
-        startGame();
-        refresh();
+        prepareStartGame();
+        
 
      }).appendTo('.mainPageLeft');
 
